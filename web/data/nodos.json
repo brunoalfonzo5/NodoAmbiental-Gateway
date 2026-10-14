@@ -1,0 +1,84 @@
+{
+  "fuente": "demo",
+  "actualizado": "2026-10-14T09:30:00-03:00",
+  "gateway": {
+    "id": "GW-01",
+    "estado": "online",
+    "ultima_trama": "2026-10-14T09:29:51-03:00"
+  },
+  "nodos": [
+    {
+      "id": "NA-01",
+      "nombre": "Nodo Norte",
+      "ubicacion": "Punto ilustrativo A",
+      "lat": -38.9384,
+      "lon": -69.2269,
+      "estado": "online",
+      "ultima_lectura": "2026-10-14T09:29:51-03:00",
+      "bateria_pct": 86,
+      "radio": { "rssi_dbm": -91, "snr_db": 7.2 },
+      "mediciones": {
+        "temperatura_c": 38.5,
+        "humedad_pct": 32,
+        "viento_kmh": 16.8,
+        "direccion_viento": "SO",
+        "riesgo_incendio": null
+      },
+      "historial": [
+        { "hora": "08:00", "temperatura_c": 22.1, "viento_kmh": 9.6 },
+        { "hora": "08:15", "temperatura_c": 22.7, "viento_kmh": 11.2 },
+        { "hora": "08:30", "temperatura_c": 23.3, "viento_kmh": 10.8 },
+        { "hora": "08:45", "temperatura_c": 23.7, "viento_kmh": 14.1 },
+        { "hora": "09:00", "temperatura_c": 24.1, "viento_kmh": 12.5 },
+        { "hora": "09:15", "temperatura_c": 24.8, "viento_kmh": 15.2 },
+        { "hora": "09:30", "temperatura_c": 25.4, "viento_kmh": 16.8 }
+      ]
+    },
+    {
+      "id": "NA-02",
+      "nombre": "Nodo Sur",
+      "ubicacion": "Punto ilustrativo B",
+      "lat": -38.9548,
+      "lon": -69.2343,
+      "estado": "online",
+      "ultima_lectura": "2026-10-14T09:29:37-03:00",
+      "bateria_pct": 71,
+      "radio": { "rssi_dbm": -103, "snr_db": 2.8 },
+      "mediciones": {
+        "temperatura_c": 24.2,
+        "humedad_pct": 38,
+        "viento_kmh": 21.4,
+        "direccion_viento": "O",
+        "riesgo_incendio": null
+      },
+      "historial": [
+        { "hora": "08:00", "temperatura_c": 21.8, "viento_kmh": 14.4 },
+        { "hora": "08:15", "temperatura_c": 22.3, "viento_kmh": 17.2 },
+        { "hora": "08:30", "temperatura_c": 22.6, "viento_kmh": 18.8 },
+        { "hora": "08:45", "temperatura_c": 23.1, "viento_kmh": 19.5 },
+        { "hora": "09:00", "temperatura_c": 23.6, "viento_kmh": 20.6 },
+        { "hora": "09:15", "temperatura_c": 24.0, "viento_kmh": 22.0 },
+        { "hora": "09:30", "temperatura_c": 24.2, "viento_kmh": 21.4 }
+      ]
+    },
+    {
+      "id": "NA-03",
+      "nombre": "Nodo Oeste",
+      "ubicacion": "Punto ilustrativo C",
+      "lat": -38.9440,
+      "lon": -69.2582,
+      "estado": "offline",
+      "ultima_lectura": "2026-10-14T08:52:10-03:00",
+      "bateria_pct": 42,
+      "radio": { "rssi_dbm": -117, "snr_db": -8.4 },
+      "mediciones": {
+        "temperatura_c": 23.7,
+        "humedad_pct": 36,
+        "viento_kmh": 11.5,
+        "direccion_viento": "NO",
+        "riesgo_incendio": null
+      },
+      "historial": []
+    }
+  ]
+}
