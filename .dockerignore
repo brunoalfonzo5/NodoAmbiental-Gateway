@@ -1,0 +1,19 @@
+# Entorno virtual
+.venv/
+
+# Credenciales
+.env
+.env.*
+
+# Excepcion para el ejemplo
+!.env.example
+
+# Git
+.git/
+
+# Python
+__pycache__/
+*.pyc
+
+# Archivos temporales
+*.log

@@ -88,3 +88,58 @@ posteriormente a una Raspberry Pi 4 utilizando Docker Compose.
 
 En una instalación nueva deberán crearse las credenciales
 MQTT antes de iniciar el broker.
+
+## Procesador MQTT
+
+El proyecto cuenta con un procesador Python encargado de:
+
+- Recibir paquetes JSON desde Meshtastic.
+- Identificar automáticamente los nodos transmisores.
+- Normalizar las mediciones ambientales.
+- Detectar paquetes duplicados.
+- Publicar las mediciones normalizadas mediante MQTT.
+- Recuperar la conexión ante interrupciones.
+
+### Servicios Docker
+
+La infraestructura utiliza Docker Compose con dos servicios:
+
+- mosquitto: broker MQTT.
+- processor: procesador Python.
+
+### Iniciar los servicios
+
+Desde la carpeta infra:
+
+docker compose up -d --build
+
+### Verificar funcionamiento
+
+docker compose ps
+
+### Consultar registros
+
+docker compose logs -f processor
+
+### Tópicos MQTT
+
+Datos originales:
+nodoambiental/2/json/#
+
+Datos procesados:
+nodoambiental/procesado/<node_id>
+
+### Configuración
+
+Las variables de conexión se encuentran en el archivo .env.
+
+Para una instalación nueva, utilizar .env.example como referencia.
+
+El archivo .env no debe subirse a GitHub.
+
+### Observaciones
+
+La detección de duplicados funciona actualmente en memoria.
+
+El almacenamiento persistente de mediciones se incorporará
+en la próxima etapa mediante una base de datos.

@@ -1,6 +1,11 @@
 services:
 
+  # ======================================
+  # BROKER MQTT
+  # ======================================
+
   mosquitto:
+
     image: eclipse-mosquitto:2
 
     restart: unless-stopped
@@ -11,6 +16,34 @@ services:
     volumes:
       - ./mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
       - mosquitto_data:/mosquitto/data
+
+
+  # ======================================
+  # PROCESADOR MQTT
+  # ======================================
+
+  processor:
+
+    build:
+      context: ..
+      dockerfile: infra/processor/Dockerfile
+
+    restart: unless-stopped
+
+    depends_on:
+      - mosquitto
+
+    env_file:
+      - ../.env
+
+    environment:
+      MQTT_HOST: mosquitto
+      MQTT_PORT: "1883"
+
+
+# ======================================
+# VOLUMENES
+# ======================================
 
 volumes:
   mosquitto_data:
